@@ -1,0 +1,33 @@
+-- Create a Clothing Store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, rating INTEGER, size INTEGER);
+
+INSERT INTO store VALUES (1, "Melony Crop", 15, 7, 4);
+INSERT INTO store VALUES (2, "uGLy Sweater", 30, 10, 7);
+INSERT INTO store VALUES (3, "Push Up Bra", 56, 8, 4); 
+INSERT INTO store VALUES (4, "socks", 5, 4, 0);
+INSERT INTO store VALUES (5, "Scoop Neck Tee", 20, 10, 6);
+INSERT INTO store VALUES (6, "Long Sleeve Tee", 25, 7, 2);
+INSERT INTO store VALUES (7, "Plaid Skirt", 45, 9, 4);
+INSERT INTO store VALUES (8, "Mary Jane Shoes", 50, 6, 8); 
+INSERT INTO store VALUES (9, "Sweater", 30, 5, 9);
+INSERT INTO store VALUES (10, "Jeans", 65, 9, 8);
+INSERT INTO store VALUES (11, "Leggings", 45, 10, 6);
+INSERT INTO store VALUES (12, "Shorts", 47, 7, 8);
+INSERT INTO store VALUES (13, "Mini Black Dress", 75, 9, 6); 
+INSERT INTO store VALUES (14, "Gia Crop Top", 38, 4, 0);
+INSERT INTO store VALUES (15, "Regae Onesie", 55, 6, 9);
+
+-- Display total sum of all the price of the clothes.
+SELECT * FROM store;
+SELECT SUM(price) FROM store; 
+
+-- Display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc;
+
+-- What are the 5 most highly rated items? 
+SELECT name, price, rating
+FROM store
+order by rating desc
+limit 5; 
